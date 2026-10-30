@@ -1,0 +1,41 @@
+name: Evidence consistency verification
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "scripts/**"
+      - "evidence/**"
+      - ".github/workflows/evidence-verification.yml"
+  pull_request:
+    paths:
+      - "scripts/**"
+      - "evidence/**"
+      - ".github/workflows/evidence-verification.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  evidence-consistency:
+    name: Archived evidence checks (not model reproduction)
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Syntax-check verification utilities
+        run: python -m compileall -q scripts
+      - name: Verify archived evidence consistency
+        run: python scripts/verify_evidence.py
+      - name: Record verification scope
+        run: |
+          echo "This CI run checks archived evidence summaries only."
+          echo "It does not rerun HGB training, LOSO evaluation, bootstrap, or calibration."
