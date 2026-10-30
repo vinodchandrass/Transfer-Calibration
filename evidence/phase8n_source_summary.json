@@ -1,0 +1,13 @@
+{
+  "source_zip_sha256": "23e67d1a9dc66a52c4e04f56fc024b7089ff62903e17b4e6ebad351e62a73b0f",
+  "csv_files": 51,
+  "source_rows": 1368883,
+  "states": 26,
+  "rl_msl_nonmissing": 2932,
+  "negative_level_values": 1722,
+  "values_gt100_m": 2061,
+  "missing_coordinates": 1364,
+  "audit_utc": "2026-10-15T09:23:53.375325+00:00",
+  "validation_status": "Source-field inventory only; no authoritative station/datum certification",
+  "source": "GW_Phase8N_Source_Metadata_Audit(1).zip"
+}
