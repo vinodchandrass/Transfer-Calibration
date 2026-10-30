@@ -1,0 +1,23 @@
+{
+  "records": 87335,
+  "states": 23,
+  "provisional_wells": 19579,
+  "pooled_mae": 1.941294535472265,
+  "loso_mae": 2.097133438517085,
+  "persistence_mae": 2.2665031208849378,
+  "loso_minus_pooled": 0.1558389030448203,
+  "coverage_90": 0.8949562031258945,
+  "mean_interval_width": 7.737194718724844,
+  "states_loso_worse_than_pooled": 19,
+  "states_loso_worse_than_persistence": 9,
+  "states_holm_p_lt_005": 14,
+  "bootstrap_replicates_per_state": 2000,
+  "bootstrap_unit": "provisional well",
+  "seed": 20261015,
+  "source": "GW_Phase8M_Publication_Evidence(1).zip; existing synthesis, not independently reproduced",
+  "limitations": [
+    "No authenticated well IDs",
+    "Original model fits not re-executed",
+    "No source-release timing verification"
+  ]
+}
