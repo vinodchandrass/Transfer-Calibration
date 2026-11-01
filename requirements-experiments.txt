@@ -1,0 +1,6 @@
+# Dependencies imported by the recovered Paper B experiment scripts.
+# Versions are NOT authenticated from the original training environment.
+# Pin exact versions only after validating the original environment and numerical parity.
+numpy
+pandas
+scikit-learn
